@@ -29,8 +29,6 @@ namespace DayOne{
 		}
 		private static ArrayList Take_input(){
 			//NumValues numvals;
-			string[] numbers = { "0",		 "1",		 "2",		"3",	"4",	 "5",		 "6",		"7",  "8",  "9" ,
-													"nine","eight","seven","six","five","four","three","two","one","zero"};
 			ArrayList result = new ArrayList();
 			
 			try {
@@ -39,15 +37,6 @@ namespace DayOne{
 					string line;
 					while((line = sr.ReadLine()) != null){
 						string first="a"; string last="z";
-						foreach(char c in line){
-							string cc = c.ToString();
-							if(Array.Exists(numbers, x => x == cc)){
-								last = cc;
-								if(first == "a"){
-									first = cc;
-								}
-							}
-						}
 						result.Add(int.Parse(first+last));
 					}
 					return result;
